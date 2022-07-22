@@ -1,0 +1,140 @@
+
+/* Start Global Rules */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.parent {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    position: relative;
+}
+p {
+    font-size: 15px;
+    color: hsl(228, 12%, 48%);
+}
+/* End Global Rules */
+/* Start Card */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+    width: 450px;
+    height: 350px;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card .image {
+    width: 50%;
+    height: 100%;
+}
+.card .image img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+}
+.card .image .mobile-img {
+    display: none;
+}
+.card .content {
+    width: calc(50% - 50px);
+    height: 100%;
+    padding: 25px;
+}
+.card .content h1 {
+    margin: 0;
+    font-size: 27px;
+    font-family: 'Fraunces', serif;
+    margin-bottom: 20px;
+    line-height: 1;
+    font-weight: 700;
+}
+.card .content .pri {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.card .content .price {
+    color: hsl(158, 36%, 37%);
+    display: inline-block;
+    font-size: 25px;
+}
+.card .content .last-price {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+.card .content p {
+    margin: 0;
+}
+.card .content .per {
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.card .content .line {
+    font-size: 11px;
+    line-height: 1.6;
+}
+.card .content h6 {
+    margin: 0;
+}
+.card .content .add {
+    background-color: hsl(158, 36%, 37%);
+    width: 175px;
+    height: 35px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+.card .content .add p {
+    z-index: 2;
+    color: white;
+    font-size: 12px;
+    margin-left: 5px;
+}
+/* End Card */
+
+@media (max-width: 375px) {
+    .card {
+        flex-direction: column;
+        width: 300px;
+        height: 85%;
+        
+        border-top-right-radius: 10px;
+    }
+    .card .image{
+        width: 100%;
+        height: 48%;
+        border-top-right-radius: 10px;
+    }
+    .card .image .desktop-img {
+        display: none;
+    }
+    .card .image .mobile-img {
+        display: block;
+    }
+    .card .image img {
+        max-width: 100%;
+        border-top-left-radius: 10px;
+        max-height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .card .content {
+        width: calc(100% - 50px);
+        height: 52%;
+    }
+}
